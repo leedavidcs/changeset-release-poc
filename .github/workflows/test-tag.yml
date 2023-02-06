@@ -1,0 +1,16 @@
+name: Test Tag
+
+on:
+  create:
+    tags:
+      - '**'
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  test:
+    name: Test tags
+    runs-on: ubuntu-latest
+    steps:
+      - name: Do dummy
+        run: echo "hello world"
