@@ -1,5 +1,13 @@
 # @apps/web
 
+## 0.0.8
+
+### Patch Changes
+
+- 179443a: feat: added changeset
+- Updated dependencies [179443a]
+  - ui@0.0.4
+
 ## 0.0.7
 
 ### Patch Changes
