@@ -28,6 +28,7 @@ jobs:
 
       - name: Set App Name
         run: echo "GITHUB_APP_NAME=$(echo "{{ github.ref_name }}" | sed 's:.*/::')" >> $GITHUB_ENV
+        shell: bash
 
       - name: Build app
         # Build the project that the tag indicates to deploy for
