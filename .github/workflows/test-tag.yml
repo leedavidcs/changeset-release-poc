@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Do dummy
-        run: echo "hello world"
+        run: echo "hello world!"
