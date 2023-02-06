@@ -1,5 +1,13 @@
 # @apps/docs
 
+## 0.0.7
+
+### Patch Changes
+
+- b297f33: feat: added changeset
+- Updated dependencies [b297f33]
+  - ui@0.0.3
+
 ## 0.0.6
 
 ### Patch Changes
