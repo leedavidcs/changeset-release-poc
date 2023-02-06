@@ -1,5 +1,13 @@
 # @apps/web
 
+## 0.0.6
+
+### Patch Changes
+
+- 6baf83b: feat: added changeset
+- Updated dependencies [6baf83b]
+  - ui@0.0.2
+
 ## 0.0.5
 
 ### Patch Changes
