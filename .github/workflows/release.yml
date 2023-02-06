@@ -29,10 +29,6 @@ jobs:
       - name: Fetch Tags
         run: git fetch origin 'refs/tags/*:refs/tags/*'
 
-      - name: Sleep 5 seconds
-        run: sleep 5s
-        shell: bash
-
       - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
