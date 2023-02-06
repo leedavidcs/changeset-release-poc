@@ -1,5 +1,11 @@
 # @apps/web
 
+## 0.0.3
+
+### Patch Changes
+
+- 5c4ce13: feat: added changesets
+
 ## 0.0.2
 
 ### Patch Changes
