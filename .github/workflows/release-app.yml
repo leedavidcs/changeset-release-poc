@@ -1,0 +1,34 @@
+name: Release App
+
+on:
+  push:
+    tags:
+      - '@apps/*'
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release App
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Set App Name
+        run: echo "GITHUB_APP_NAME=$(echo "{{ github.ref_name }}" | sed 's:.*/::')" >> $GITHUB_ENV
+
+      - name: Build app
+        # Build the project that the tag indicates to deploy for
+        run: pnpm turbo run build --filter=./apps/${{ env.GITHUB_APP_NAME }}
