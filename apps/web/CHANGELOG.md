@@ -1,5 +1,13 @@
 # @apps/web
 
+## 0.0.12
+
+### Patch Changes
+
+- b875ff3: Added changeset
+- Updated dependencies [b875ff3]
+  - ui@0.0.5
+
 ## 0.0.11
 
 ### Patch Changes
