@@ -1,5 +1,11 @@
 # @apps/docs
 
+## 0.0.11
+
+### Patch Changes
+
+- 7323a4f: Added changeset
+
 ## 0.0.10
 
 ### Patch Changes

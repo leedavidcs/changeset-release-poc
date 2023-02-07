@@ -1,5 +1,11 @@
 # tag-releases
 
+## 0.0.6
+
+### Patch Changes
+
+- 7323a4f: Added changeset
+
 ## 0.0.5
 
 ### Patch Changes
