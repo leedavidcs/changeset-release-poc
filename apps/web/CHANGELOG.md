@@ -1,5 +1,13 @@
 # @apps/web
 
+## 0.0.13
+
+### Patch Changes
+
+- 40b11cc: added chnageset
+- Updated dependencies [40b11cc]
+  - ui@0.0.6
+
 ## 0.0.12
 
 ### Patch Changes
