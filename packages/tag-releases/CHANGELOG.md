@@ -1,5 +1,11 @@
 # tag-releases
 
+## 0.0.5
+
+### Patch Changes
+
+- 3a29006: chore: added changesets
+
 ## 0.0.4
 
 ### Patch Changes
