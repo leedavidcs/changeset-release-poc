@@ -1,5 +1,13 @@
 # @apps/web
 
+## 0.0.14
+
+### Patch Changes
+
+- 470e1d1: Added changeset
+- Updated dependencies [470e1d1]
+  - ui@0.0.7
+
 ## 0.0.13
 
 ### Patch Changes
