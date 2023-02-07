@@ -28,8 +28,16 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Build Dependencies
-        run: pnpm build
+      - name: Create Release Pull Request
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish Tags
-        run: node tag-releases.js
+      # - name: Build Dependencies
+      #   run: pnpm build
+
+      # - name: Publish Tags
+      #   run: node tag-releases.js
