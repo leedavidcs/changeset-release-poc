@@ -1,5 +1,11 @@
 # @apps/web
 
+## 0.0.10
+
+### Patch Changes
+
+- 3a29006: chore: added changesets
+
 ## 0.0.9
 
 ### Patch Changes

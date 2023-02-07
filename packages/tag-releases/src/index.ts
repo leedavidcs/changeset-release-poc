@@ -4,12 +4,14 @@ import execa from "execa";
 const runGitCommand = async (command: string, args: readonly string[] = []): Promise<void> => {
     const { stdout, stderr } = await execa(command, args);
 
+    console.log(command);
     console.log(stdout, stderr);
 };
 
 const runShellCommand = async (command: string): Promise<void> => {
     const { stdout, stderr } = await execa.command(command);
 
+    console.log(command);
     console.log(stdout, stderr);
 };
 
@@ -26,7 +28,7 @@ export const tagReleases = async () => {
     await runGitCommand("git", ["add", "."]);
     await runGitCommand("git", ["commit", "-m", "versioned packages"]);
     await runShellCommand("pnpm changeset tag");
-    await runGitCommand("git", ["push", "origin", "--tags"]);
+    await runGitCommand("git", ["push", "origin", "master", "--tags"]);
 
     process.exit(0);
 };
