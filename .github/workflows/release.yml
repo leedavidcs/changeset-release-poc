@@ -25,11 +25,11 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2.2.4
 
-      - name: Build Dependencies
-        run: pnpm build
-
       - name: Install Dependencies
         run: pnpm install
+
+      - name: Build Dependencies
+        run: pnpm build
 
       - name: Publish Tags
         run: node tag-releases.js
