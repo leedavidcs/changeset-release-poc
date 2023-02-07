@@ -22,8 +22,8 @@ export const tagReleases = async () => {
     if (!hasChangesets) return;
 
     await runGitCommand("git", ["fetch", "origin", "refs/tags/*:refs/tags/*"]);
-    await runGitCommand("git", ["config", "user.email", "\"leedavidcs@gmail.com\""]);
-    await runGitCommand("git", ["config", "user.name", "\"leedavidcs\""]);
+    await runGitCommand("git", ["config", "user.email", "\"github-actions[bot]@users.noreply.github.com\""]);
+    await runGitCommand("git", ["config", "user.name", "\"github-actions[bot]\""]);
     await runShellCommand("pnpm changeset version");
     await runGitCommand("git", ["add", "."]);
     await runGitCommand("git", ["commit", "-m", "versioned packages"]);
