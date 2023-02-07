@@ -19,6 +19,7 @@
     "@changesets/cli": "^2.26.0",
     "eslint-config-custom": "workspace:*",
     "prettier": "latest",
+    "tag-releases": "workspace:*",
     "turbo": "latest"
   },
   "engines": {
