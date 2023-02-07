@@ -16,7 +16,7 @@ export const tagReleases = async () => {
     await runCommand("git fetch origin", ["refs/tags/*:refs/tags/*"]);
     await runCommand("git config user.email", ["leedavidcs@gmail.com"]);
     await runCommand("git config user.name", ["David Lee"]);
-    await runCommand("pnpm chnageset version");
+    await runCommand("pnpm changeset version");
     await runCommand("git add .");
     await runCommand("git commit", ["-m", "versioned packages"]);
     await runCommand("pnpm changeset tag");
