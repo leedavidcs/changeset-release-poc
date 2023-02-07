@@ -1,9 +1,9 @@
 {
     "name": "tag-releases",
-    "version": "0.0.3",
-	"main": "./dist/index.js",
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.ts",
+    "version": "0.0.4",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
     "license": "MIT",
     "scripts": {
         "build": "tsup src/index.ts --format esm,cjs --dts",

@@ -4,4 +4,4 @@
 "@apps/web": patch
 ---
 
-Added changesets
+chore: added changesets

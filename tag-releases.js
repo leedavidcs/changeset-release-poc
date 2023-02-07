@@ -1,3 +1,7 @@
 const { tagReleases } = require("tag-releases");
 
-tagReleases();
+tagReleases((...args) => {
+    console.log("asdf");
+
+    console.log(...args);
+});

@@ -1,5 +1,12 @@
 # @apps/docs
 
+## 0.0.9
+
+### Patch Changes
+
+- 70f0ac2: Added changesets
+- 6315719: Added test changeset
+
 ## 0.0.8
 
 ### Patch Changes
