@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js 16.x
         uses: actions/setup-node@v3
@@ -29,10 +31,5 @@ jobs:
       - name: Fetch Tags
         run: git fetch origin 'refs/tags/*:refs/tags/*'
 
-      - name: Create Release Pull Request
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          publish: pnpm release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish Tags
+        run: node tag-releases.js
