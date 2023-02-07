@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.MY_GH_PAT }}
 
       - name: Setup Node.js 16.x
         uses: actions/setup-node@v3
