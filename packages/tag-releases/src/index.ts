@@ -4,7 +4,7 @@ import execa from "execa";
 const runGitCommand = async (command: string, args: readonly string[] = []): Promise<void> => {
     const { stdout, stderr } = await execa(command, args);
 
-    console.log("tag-release", stdout, stderr);
+    console.log(stdout, stderr);
 };
 
 const runShellCommand = async (command: string): Promise<void> => {
@@ -17,7 +17,7 @@ export const tagReleases = async () => {
     const changesets = await readChangesets(process.cwd());
     const hasChangesets = !!changesets.length;
 
-    // if (!hasChangesets) return;
+    if (!hasChangesets) return;
 
     await runGitCommand("git", ["fetch", "origin", "refs/tags/*:refs/tags/*"]);
     await runGitCommand("git", ["config", "user.email", "\"leedavidcs@gmail.com\""]);
